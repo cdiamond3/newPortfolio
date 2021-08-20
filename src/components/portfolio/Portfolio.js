@@ -1,10 +1,12 @@
 import PortfolioList from "../portfolioList/PortfolioList"
 import "./portfolio.scss"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { webPortfolio, appPortfolio, featuredPortfolio } from "../../data"
 
 export default function Portfolio() {
 
     const [selected, setSelected] = useState("featured")
+    const [data, setData] = useState([])
 
     const list = [
         {
@@ -16,7 +18,7 @@ export default function Portfolio() {
             title: "Web App"
         },
         {
-            id: "Mobile App",
+            id: "mobile",
             title: "Mobile App"
         },
         {
@@ -24,6 +26,25 @@ export default function Portfolio() {
             title: "Design"
         },
     ]
+
+
+    useEffect(() => {
+
+        switch (selected) {
+            case "featured":
+                setData(featuredPortfolio)
+                break;
+            case "web":
+                setData(webPortfolio)
+                break;
+            case "mobile":
+                setData(appPortfolio)
+                break;
+            default:
+                setData(webPortfolio)
+        }
+
+    }, [selected])
 
 
     return (
@@ -39,48 +60,16 @@ export default function Portfolio() {
                 ))}
             </ul>
             <div className="container" >
-                <div className="item">
-                    <img
-                        src="https://uploads-ssl.webflow.com/5e5d98432c687cb6c71f7894/5fc97743f847f22b0345d5ce_favicon_256.png"
-                        alt=""
-                    />
-                    <h3>Crypto App</h3>
-                </div>
-                <div className="item">
-                    <img
-                        src="https://uploads-ssl.webflow.com/5e5d98432c687cb6c71f7894/5fc97743f847f22b0345d5ce_favicon_256.png"
-                        alt=""
-                    />
-                    <h3>Crypto App</h3>
-                </div>
-                <div className="item">
-                    <img
-                        src="https://uploads-ssl.webflow.com/5e5d98432c687cb6c71f7894/5fc97743f847f22b0345d5ce_favicon_256.png"
-                        alt=""
-                    />
-                    <h3>Crypto App</h3>
-                </div>
-                <div className="item">
-                    <img
-                        src="https://uploads-ssl.webflow.com/5e5d98432c687cb6c71f7894/5fc97743f847f22b0345d5ce_favicon_256.png"
-                        alt=""
-                    />
-                    <h3>Crypto App</h3>
-                </div>
-                <div className="item">
-                    <img
-                        src="https://uploads-ssl.webflow.com/5e5d98432c687cb6c71f7894/5fc97743f847f22b0345d5ce_favicon_256.png"
-                        alt=""
-                    />
-                    <h3>Crypto App</h3>
-                </div>
-                <div className="item">
-                    <img
-                        src="https://uploads-ssl.webflow.com/5e5d98432c687cb6c71f7894/5fc97743f847f22b0345d5ce_favicon_256.png"
-                        alt=""
-                    />
-                    <h3>Crypto App</h3>
-                </div>
+                {data.map(d => (
+
+                    <div className="item">
+                        <img
+                            src={d.img}
+                            alt=""
+                        />
+                        <h3>{d.title}</h3>
+                    </div>
+                ))}
             </div>
         </div>
     )
