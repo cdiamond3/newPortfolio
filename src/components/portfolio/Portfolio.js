@@ -1,7 +1,7 @@
 import PortfolioList from "../portfolioList/PortfolioList"
 import "./portfolio.scss"
 import { useState, useEffect } from "react"
-import { webPortfolio, appPortfolio, featuredPortfolio } from "../../data"
+import { webPortfolio, appPortfolio, featuredPortfolio, socialsPortfolio } from "../../data"
 
 export default function Portfolio() {
 
@@ -21,9 +21,13 @@ export default function Portfolio() {
             id: "mobile",
             title: "Mobile App"
         },
+        // {
+        //     id: "design",
+        //     title: "Design"
+        // },
         {
-            id: "design",
-            title: "Design"
+            id: "socials",
+            title: "Socials"
         },
     ]
 
@@ -39,6 +43,9 @@ export default function Portfolio() {
                 break;
             case "mobile":
                 setData(appPortfolio)
+                break;
+            case "socials":
+                setData(socialsPortfolio)
                 break;
             default:
                 setData(webPortfolio)
@@ -61,8 +68,7 @@ export default function Portfolio() {
             </ul>
             <div className="container" >
                 {data.map(d => (
-
-                    <div className="item">
+                    <div className="item" onClick={() => console.log("hello")}>
                         <img
                             src={d.img}
                             alt=""
