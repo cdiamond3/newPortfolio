@@ -7,30 +7,30 @@ export default function Testimonials() {
     const data = [
         {
             id: 1,
-            name: "Caitlin",
-            title: "Asset Manager",
-            img: "cait.jpg",
+            name: "Tony S",
+            title: "Front-End/UI Designer",
+            img: "Tony.jpeg",
             icon: "youtube.png",
-            desc: "Commodo non ad adipisicing ea anim tempor ex et cupidatat reprehenderit irure nulla sunt."
+            desc: "During our time together at Flatiron School, Chris and I worked together on projects often. He was always fun to work with, and I can’t say enough about his dedication and hard work. He is insightful, innovative, and won’t stop until the job is done and done right."
 
         },
         {
             id: 2,
-            name: "Chris",
-            title: "CEO of Life",
-            img: "me.jpg",
+            name: "Lindsay C",
+            title: "Hair Stylist/Entrepreneur",
+            img: "Lindsay.jpeg",
             icon: "linkedin.png",
-            desc: "Reprehenderit aliqua esse enim ea.",
+            desc: "Chris has helped changed my world! As a entreprenuer it is so important that my website and social media looks and functions well! Chris did just that and more! His background in media brings elements to his projects that I have not seen before!",
             featured: true
             
         },
         {
             id: 3,
-            name: "DMFD",
-            title: "Bad Ass Motha Fucka",
-            img: "poppa.jpg",
+            name: "Greg H",
+            title: "Backend Engineer",
+            img: "Greg.jpg",
             icon: "twitter.png",
-            desc: "Commodo non ad adipisicing ea anim tempor ex et cupidatat reprehenderit irure nulla sunt.",
+            desc: "Chris was a pleasure to work with in my time with him at flatiron. Not only was he professional, creative and hard working but he was also a great personality to interact with on a daily basis. I enjoyed working with Chris everyday.",
         },
     ]
     return (

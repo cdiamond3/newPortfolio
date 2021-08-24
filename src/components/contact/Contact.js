@@ -5,6 +5,7 @@ export default function Contact() {
 
 
     const [message, setMessage] = useState(false)
+    const [userMessage, setUserMessage] = useState("")
 
 
     const handleSubmit = (e) => {
@@ -14,7 +15,12 @@ export default function Contact() {
 
     const handleClick = (e) => {
         e.preventDefault()
-        setMessage(" ")
+        setUserMessage("")
+    }
+
+    const handleChange = (e) => {
+        e.preventDefault()
+        setUserMessage(e.target.value)
     }
     return (
         <div className="contact" id="contact">
@@ -25,7 +31,7 @@ export default function Contact() {
                 <h2> Contact Me.</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="Email"></input>
-                    <textarea placeholder="Message"></textarea>
+                    <textarea value={userMessage} placeholder="Message" onChange={(e) => handleChange(e)}></textarea>
                     <button type="submit" onClick={handleClick}> Send </button>
                     {message && <span> Thank you for your message! I will reply asap! </span>}
                 </form>
