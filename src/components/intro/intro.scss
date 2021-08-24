@@ -19,7 +19,7 @@
         .imgContainer{
             width: 850px;
             height: 850px;
-            background-color: crimson;
+            background-color: rgb(188, 68, 186);
             border-radius: 50%;
             display: flex;
             align-items: flex-end;
@@ -80,7 +80,7 @@
 
                 span{
                     font-size: inherit;
-                    color: crimson;
+                    color: rgb(188, 68, 186);
                 }
                 .ityped-cursor{
                     animation: blink 1s infinite;

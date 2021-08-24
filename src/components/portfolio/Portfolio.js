@@ -11,7 +11,8 @@ export default function Portfolio() {
     const list = [
         {
             id: "featured",
-            title: "Featured"
+            title: "Featured",
+
         },
         {
             id: "web",
@@ -68,7 +69,7 @@ export default function Portfolio() {
             </ul>
             <div className="container" >
                 {data.map(d => (
-                    <div className="item" onClick={() => console.log("hello")}>
+                    <div className="item" onClick={() => window.open(d.url)}>
                         <img
                             src={d.img}
                             alt=""
