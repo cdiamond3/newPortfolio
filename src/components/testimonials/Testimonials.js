@@ -9,7 +9,7 @@ export default function Testimonials() {
             id: 1,
             name: "Tony S",
             title: "Front-End/UI Designer",
-            img: "Tony.jpeg",
+            img: "Tony.jpg",
             icon: "youtube.png",
             desc: "During our time together at Flatiron School, Chris and I worked together on projects often. He was always fun to work with, and I can’t say enough about his dedication and hard work. He is insightful, innovative, and won’t stop until the job is done and done right."
 
@@ -18,7 +18,7 @@ export default function Testimonials() {
             id: 2,
             name: "Lindsay C",
             title: "Hair Stylist/Entrepreneur",
-            img: "Lindsay.jpeg",
+            img: "Lindsay.jpg",
             icon: "linkedin.png",
             desc: "Chris has helped changed my world! As a entreprenuer it is so important that my website and social media looks and functions well! Chris did just that and more! His background in media brings elements to his projects that I have not seen before!",
             featured: true
