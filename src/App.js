@@ -7,6 +7,7 @@ import Works from './components/works/Works';
 import Menu from './components/menu/Menu'
 import "./app.scss"
 import { useState } from "react"
+import Portfolio2 from './components/portfolio copy/Portfolio2';
 
 function App() {
 
@@ -18,10 +19,11 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro />
+        <Portfolio2 />
         <Portfolio />
-        <Works />
+        {/* <Works /> */}
         <Testimonials />
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </div>
   );

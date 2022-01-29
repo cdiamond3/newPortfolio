@@ -7,14 +7,15 @@ export default function TopBar({ menuOpen, setMenuOpen }) {
         <div className={"topbar " + (menuOpen && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo"> Diamond.</a>
+                    <a className="logo"> The Immature Infants Club</a>
                     <div className="itemContainer">
                         <Person className="icon" />
-                        <span>+1 720-261-1003</span>
+                        <span>@immatureinfants</span>
                     </div>
                     <div className="itemContainer">
-                        <Mail className="icon" />
-                        <span>diamond.chris.3@gmail.com</span>
+                        <a className="mintLink" href="https://www.immatureinfants.com"> MINT HERE</a>
+                        <br></br>
+                        <a className="osLink" href="https://opensea.io/collection/the-immature-infants-club-official"> OPENSEA MARKET</a>
                     </div>
                 </div>
                 <div className="right">

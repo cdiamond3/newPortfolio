@@ -1,7 +1,7 @@
 import PortfolioList from "../portfolioList/PortfolioList"
 import "./portfolio.scss"
 import { useState, useEffect } from "react"
-import { webPortfolio, appPortfolio, featuredPortfolio, socialsPortfolio } from "../../data"
+import { webPortfolio, charityPortfolio, coloringBook, rdPortfolio, mutate } from "../../data"
 
 export default function Portfolio() {
 
@@ -11,24 +11,24 @@ export default function Portfolio() {
     const list = [
         {
             id: "featured",
-            title: "Featured",
+            title: "Phase 1: The Start",
 
         },
         {
             id: "web",
-            title: "Web App"
+            title: "Phase 2: Immature Pets Collection"
         },
         {
-            id: "mobile",
-            title: "Mobile App"
+            id: "charity",
+            title: "Phase 3: Charity Drive"
         },
-        // {
-        //     id: "design",
-        //     title: "Design"
-        // },
         {
-            id: "socials",
-            title: "Socials"
+            id: "design",
+            title: "Phase 4: Childrens Coloring Book"
+        },
+        {
+            id: "Baby Bottle Bots",
+            title: "Phase 5: BABY BOTTLE BOT MUTATIONS"
         },
     ]
 
@@ -37,19 +37,22 @@ export default function Portfolio() {
 
         switch (selected) {
             case "featured":
-                setData(featuredPortfolio)
+                setData(rdPortfolio)
                 break;
             case "web":
                 setData(webPortfolio)
                 break;
-            case "mobile":
-                setData(appPortfolio)
+            case "charity":
+                setData(charityPortfolio)
                 break;
-            case "socials":
-                setData(socialsPortfolio)
+            case "design":
+                setData(coloringBook)
+                break;
+            case "Baby Bottle Bots":
+                setData(mutate)
                 break;
             default:
-                setData(webPortfolio)
+                setData(rdPortfolio)
         }
 
     }, [selected])
@@ -57,7 +60,8 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio" id="portfolio" >
-            <h1> Portfolio </h1>
+            <h1> ROAD MAP </h1>
+            <h3> (Hover Over Tiles For Details) </h3>
             <ul>
                 {list.map((item) => (
                     <PortfolioList
@@ -69,7 +73,7 @@ export default function Portfolio() {
             </ul>
             <div className="container" >
                 {data.map(d => (
-                    <div className="item" onClick={() => window.open(d.url)}>
+                    <div className="item2">
                         <img
                             src={d.img}
                             alt=""
