@@ -1,67 +1,35 @@
 import PortfolioList from "../portfolioList/PortfolioList"
 import "./portfolio.scss"
 import { useState, useEffect } from "react"
-import { webPortfolio, charityPortfolio, coloringBook, rdPortfolio, mutate } from "../../data"
+import { myProjectsPortfolio, appPortfolio, professionalExperiencePortfolio, list } from "../../data"
 
 export default function Portfolio() {
 
-    const [selected, setSelected] = useState("featured")
+    const [selected, setSelected] = useState("professionalExperience")
     const [data, setData] = useState([])
-
-    const list = [
-        {
-            id: "featured",
-            title: "Phase 1: The Start",
-
-        },
-        {
-            id: "web",
-            title: "Phase 2: Immature Pets Collection"
-        },
-        {
-            id: "charity",
-            title: "Phase 3: Charity Drive"
-        },
-        {
-            id: "design",
-            title: "Phase 4: Childrens Coloring Book"
-        },
-        {
-            id: "Baby Bottle Bots",
-            title: "Phase 5: BABY BOTTLE BOT MUTATIONS"
-        },
-    ]
-
 
     useEffect(() => {
 
         switch (selected) {
-            case "featured":
-                setData(rdPortfolio)
+            case "professionalExperience":
+                setData(professionalExperiencePortfolio)
                 break;
-            case "web":
-                setData(webPortfolio)
+            case "myProjects":
+                setData(myProjectsPortfolio)
                 break;
-            case "charity":
-                setData(charityPortfolio)
-                break;
-            case "design":
-                setData(coloringBook)
-                break;
-            case "Baby Bottle Bots":
-                setData(mutate)
+            case "blog":
+                setData(appPortfolio)
                 break;
             default:
-                setData(rdPortfolio)
+                setData(professionalExperiencePortfolio)
         }
-
     }, [selected])
 
 
     return (
         <div className="portfolio" id="portfolio" >
-            <h1> ROAD MAP </h1>
-            <h3> (Hover Over Tiles For Details) </h3>
+            <h1> Portfolio </h1>
+            <div className="miniNav">
             <ul>
                 {list.map((item) => (
                     <PortfolioList
@@ -71,17 +39,24 @@ export default function Portfolio() {
                         setSelected={setSelected} />
                 ))}
             </ul>
-            <div className="container" >
+            </div>
+            <h1> Professional Experience </h1>
+            <div className="container">
                 {data.map(d => (
-                    <div className="item2">
-                        <img
-                            src={d.img}
-                            alt=""
-                        />
-                        <h3>{d.title}</h3>
+                    <div className={"card"} onClick={d.url ? () => window.open(d.url) : null}>
+                        <div className="top">
+                            <h4>  {d.title} </h4>
+                            <br></br>
+                            <div>
+                            <img src={d.img} alt="me" className="user" />
+                            </div>
+                            <h3> {d.desc} </h3>
+                        </div>
                     </div>
                 ))}
             </div>
         </div>
     )
 }
+
+
