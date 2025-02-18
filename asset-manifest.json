@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cdiamond3/newPortfolio/static/css/main.9bbd0d3c.chunk.css",
+    "main.js": "/cdiamond3/newPortfolio/static/js/main.79b3fb9d.chunk.js",
+    "main.js.map": "/cdiamond3/newPortfolio/static/js/main.79b3fb9d.chunk.js.map",
+    "runtime-main.js": "/cdiamond3/newPortfolio/static/js/runtime-main.fb676840.js",
+    "runtime-main.js.map": "/cdiamond3/newPortfolio/static/js/runtime-main.fb676840.js.map",
+    "static/js/2.41c62987.chunk.js": "/cdiamond3/newPortfolio/static/js/2.41c62987.chunk.js",
+    "static/js/2.41c62987.chunk.js.map": "/cdiamond3/newPortfolio/static/js/2.41c62987.chunk.js.map",
+    "index.html": "/cdiamond3/newPortfolio/index.html",
+    "static/css/main.9bbd0d3c.chunk.css.map": "/cdiamond3/newPortfolio/static/css/main.9bbd0d3c.chunk.css.map",
+    "static/js/2.41c62987.chunk.js.LICENSE.txt": "/cdiamond3/newPortfolio/static/js/2.41c62987.chunk.js.LICENSE.txt",
+    "static/media/man.b03c6c73.png": "/cdiamond3/newPortfolio/static/media/man.b03c6c73.png",
+    "static/media/shake.c7165a1f.svg": "/cdiamond3/newPortfolio/static/media/shake.c7165a1f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb676840.js",
+    "static/js/2.41c62987.chunk.js",
+    "static/css/main.9bbd0d3c.chunk.css",
+    "static/js/main.79b3fb9d.chunk.js"
+  ]
+}
